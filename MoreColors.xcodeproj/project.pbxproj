@@ -10,6 +10,7 @@
 		F754B8A01C714A4C004FBA48 /* MoreColors.h in Headers */ = {isa = PBXBuildFile; fileRef = F754B89F1C714A4C004FBA48 /* MoreColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F754B8A71C714A4C004FBA48 /* MoreColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F754B89C1C714A4C004FBA48 /* MoreColors.framework */; };
 		F754B8AC1C714A4C004FBA48 /* MoreColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754B8AB1C714A4C004FBA48 /* MoreColorsTests.swift */; };
+		F754B8B71C7155F1004FBA48 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754B8B61C7155F1004FBA48 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F754B8A61C714A4C004FBA48 /* MoreColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoreColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F754B8AB1C714A4C004FBA48 /* MoreColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreColorsTests.swift; sourceTree = "<group>"; };
 		F754B8AD1C714A4C004FBA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F754B8B61C7155F1004FBA48 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		F754B89E1C714A4C004FBA48 /* MoreColors */ = {
 			isa = PBXGroup;
 			children = (
+				F754B8B61C7155F1004FBA48 /* UIColorExtension.swift */,
 				F754B89F1C714A4C004FBA48 /* MoreColors.h */,
 				F754B8A11C714A4C004FBA48 /* Info.plist */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F754B8B71C7155F1004FBA48 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		F754B8B11C714A4C004FBA48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.patronusllc.MoreColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F754B8B21C714A4C004FBA48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +383,7 @@
 				F754B8B21C714A4C004FBA48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F754B8B31C714A4C004FBA48 /* Build configuration list for PBXNativeTarget "MoreColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +392,7 @@
 				F754B8B51C714A4C004FBA48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
