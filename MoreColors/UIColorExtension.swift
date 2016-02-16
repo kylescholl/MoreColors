@@ -9,24 +9,48 @@
 import UIKit
 
 extension UIColor {
+	//  This function allows users to translate a HEX string into a UIColor
 	class func hexColor(hexColorCode: String, alpha: Float = 1.0) -> UIColor {
-		let scanner = NSScanner(string: hexColorCode)
-		var color: UInt32 = 0
-		scanner.scanHexInt(&color)
 		
-		let mask = 0x000000FF
-		let r = CGFloat(Float(Int(color >> 16) & mask) / 255.0)
-		let g = CGFloat(Float(Int(color >> 8)  & mask) / 255.0)
-		let b = CGFloat(Float(Int(color)       & mask) / 255.0)
+		let hexColorCodeString: String = String(hexColorCode)
+		let searchCharacter: Character = "#"
 		
-		return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
+		if hexColorCodeString.characters.contains(searchCharacter) {
+			
+			let original          = hexColorCode
+			let newHexColorCode   = String(original.characters.dropFirst())
+			
+			let scanner       = NSScanner(string: newHexColorCode)
+			var color: UInt32 = 0
+			scanner.scanHexInt(&color)
+			
+			let mask = 0x000000FF
+			let r = CGFloat(Float(Int(color >> 16) & mask) / 255.0)
+			let g = CGFloat(Float(Int(color >> 8)  & mask) / 255.0)
+			let b = CGFloat(Float(Int(color)       & mask) / 255.0)
+			
+			return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
+			
+		} else {
+			
+			let scanner = NSScanner(string: hexColorCode)
+			var color: UInt32 = 0
+			scanner.scanHexInt(&color)
+			
+			let mask = 0x000000FF
+			let r = CGFloat(Float(Int(color >> 16) & mask) / 255.0)
+			let g = CGFloat(Float(Int(color >> 8)  & mask) / 255.0)
+			let b = CGFloat(Float(Int(color)       & mask) / 255.0)
+			
+			return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
+		}
 	}
 	
 	//	Here are just a few examples of additional
 	//  custom colors that you can use.
 	//
-	//	
-	//
+	//	You can delete any or all of these if you so desire
+	//	to.
 	
 	class func turquoiseColor() -> UIColor {
 		return hexColor("1ABC9C")
@@ -108,35 +132,7 @@ extension UIColor {
 		return hexColor("7F8C8D")
 	}
 
-	class func sexyBlue() -> UIColor {
+	class func lightBlue() -> UIColor {
 		return hexColor("0080FF")
 	}
-
-	/*
-	class func blendedColorWithForegroundColor(var foregroundColor: UIColor, var backgroundColor: UIColor, percentBlend: CGFloat) {
-		var onRed, offRed, newRed, onGreen, offGreen, newGreen, onBlue, offBlue, newBlue, onWhite, offWhite : CGFloat
-		//let onMix = getRed(onRed, onGreen, onBlue, nil)
-		if (foregroundColor = getRed(onRed)) {
-			foregroundColor = getWhite(onWhite, nil)
-			onRed = onWhite
-			onBlue = onWhite
-			onGreen = onWhite
-		}
-		if (backgroundColor = getRed(&offRed, green: &offGreen, blue: &offBlue, alpha: nil)) {
-			backgroundColor = getWhite(offWhite, alpha: nil)
-			offRed = offWhite
-			offBlue = offWhite
-			offGreen = offWhite
-		}
-		newRed = onRed * percentBlend + offRed * (1 - percentBlend)
-		newGreen = onGreen * percentBlend + offGreen * (1 - percentBlend)
-		newBlue = onBlue * percentBlend + offBlue * (1 - percentBlend)
-		return UIColor(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
-	}
-	*/
 }
-
-
-
-
-
