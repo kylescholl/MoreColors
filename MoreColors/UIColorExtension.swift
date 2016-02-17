@@ -24,7 +24,7 @@ import UIKit
 
 extension UIColor {
 	//  This function allows users to translate a HEX color code into a UIColor
-	class func hexToUI(hexColorCode: String, alpha: Float = 1.0) -> UIColor {
+	public class func hexToUI(hexColorCode: String, alpha: Float = 1.0) -> UIColor {
 		
 		let hexColorCodeString: String = String(hexColorCode)
 		let searchCharacter: Character = "#"
@@ -64,89 +64,89 @@ extension UIColor {
 	//  custom colors that you can use.
 	//
 	//	You can delete any or all of these 
-	//  if you want.
+	//  if you want to.
 	
-	class func turquoiseColor() -> UIColor {
+	public class func turquoiseColor() -> UIColor {
 		return hexToUI("1ABC9C")
 	}
 
-	class func greenSeaColor() -> UIColor {
+	public class func greenSeaColor() -> UIColor {
 		return hexToUI("16A085")
 	}
 	
-	class func emeraldColor() -> UIColor {
+	public class func emeraldColor() -> UIColor {
 		return hexToUI("2ECC71")
 	}
 	
-	class func nephritisColor() -> UIColor {
+	public class func nephritisColor() -> UIColor {
 		return hexToUI("27AE60")
 	}
 	
-	class func peterRiverColor() -> UIColor {
+	public class func peterRiverColor() -> UIColor {
 		return hexToUI("3498DB")
 	}
 	
-	class func belizeHoleColor() -> UIColor {
+	public class func belizeHoleColor() -> UIColor {
 		return hexToUI("2980B9")
 	}
 	
-	class func amethystColor() -> UIColor {
+	public class func amethystColor() -> UIColor {
 		return hexToUI("9B59B6")
 	}
 	
-	class func wisteriaColor() -> UIColor {
+	public class func wisteriaColor() -> UIColor {
 		return hexToUI("8E44AD")
 	}
 
-	class func wetAsphaltColor() -> UIColor {
+	public class func wetAsphaltColor() -> UIColor {
 		return hexToUI("34495E")
 	}
 
-	class func midnightBlueColor() -> UIColor {
+	public class func midnightBlueColor() -> UIColor {
 		return hexToUI("2C3E50")
 	}
 	
-	class func sunflowerColor() -> UIColor {
+	public class func sunflowerColor() -> UIColor {
 		return hexToUI("F1C40F")
 	}
 	
-	class func tangerineColor() -> UIColor {
+	public class func tangerineColor() -> UIColor {
 		return hexToUI("F39C12")
 	}
 
-	class func carrotColor() -> UIColor {
+	public class func carrotColor() -> UIColor {
 		return hexToUI("E67E22")
 	}
 
-	class func pumpkinColor() -> UIColor {
+	public class func pumpkinColor() -> UIColor {
 		return hexToUI("D35400")
 	}
 
-	class func alizarinColor() -> UIColor {
+	public class func alizarinColor() -> UIColor {
 		return hexToUI("E74C3C")
 	}
 
-	class func pomegranateColor() -> UIColor {
+	public class func pomegranateColor() -> UIColor {
 		return hexToUI("C0392B")
 	}
 	
-	class func cloudsColor() -> UIColor {
+	public class func cloudsColor() -> UIColor {
 		return hexToUI("ECF0F1")
 	}
 	
-	class func silverColor() -> UIColor {
+	public class func silverColor() -> UIColor {
 		return hexToUI("BDC3C7")
 	}
 	
-	class func concreteColor() -> UIColor {
+	public class func concreteColor() -> UIColor {
 		return hexToUI("95A5A6")
 	}
 	
-	class func asbestosColor() -> UIColor {
+	public class func asbestosColor() -> UIColor {
 		return hexToUI("7F8C8D")
 	}
 
-	class func lightBlue() -> UIColor {
+	public class func lightBlue() -> UIColor {
 		return hexToUI("0080FF")
 	}
 }
