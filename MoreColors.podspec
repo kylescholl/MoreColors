@@ -14,6 +14,6 @@ Pod::Spec.new do |spec|
 	spec.requires_arc           = true
 
   # Non-static information
-	spec.version                = '1.0.0'
+	spec.version                = '1.0.1'
 	spec.source                 = { :git => 'https://github.com/mccoyLBI/MoreColors.git', :tag => "#{spec.version}" }
 end
