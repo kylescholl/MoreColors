@@ -14,7 +14,7 @@ MoreColors is available on CocoaPods. Add the following to your Podfile:
 <li> Built in HEX to RGB </li>
 
 <h2> Usage </h2>
-To use this pod couldn't be any simpler!
+Using this pod couldn't be any simpler!
 
     import MoreColors
 In your viewController:
