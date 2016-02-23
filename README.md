@@ -3,6 +3,9 @@ MoreColors allows users to add their own custom colors that seamlessly integrate
 
 This project does not require any dependencies.
 
+<h3> Cocoapods </h3>
+https://cocoapods.org/pods/MoreColors
+
 <h2> Installation & Requirements </h2>
 This project requires Xcode 7 to run and compiles with swift 2.0
 
