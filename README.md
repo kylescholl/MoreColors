@@ -16,11 +16,12 @@ MoreColors is available on CocoaPods. Add the following to your Podfile:
 <h2> Usage </h2>
 Using this pod couldn't be any simpler!
 
+Import this statement at the top of whatever file you are using MoreColors with:
+
     import MoreColors
-In your viewController:
+In your file:
 
     UIColor.yourCustomColor()
-
 MoreColors was built upon seamless integration and ease. You can easily create your own colors.
 
 <h2> License </h2>
